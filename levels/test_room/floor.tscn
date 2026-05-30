@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dauy2cgvaocqk"]
 
+[ext_resource type="Script" uid="uid://byhjkm4ksd1g0" path="res://levels/test_room/floor.gd" id="1_728dk"]
 [ext_resource type="PackedScene" uid="uid://b2h14uk6anwsi" path="res://entities/player/player.tscn" id="1_tciw1"]
 
 [node name="Node3D" type="Node3D" unique_id=255792297]
+script = ExtResource("1_728dk")
 
 [node name="floor" type="CSGBox3D" parent="." unique_id=2121106331]
 use_collision = true

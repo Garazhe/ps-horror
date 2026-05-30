@@ -13,7 +13,7 @@ func _unhandled_input(event):
 		$Camera3D.rotate_x(-event.relative.y * 0.005) 
 		# Ограничиваем угол обзора, чтобы игрок не сломал шею
 		$Camera3D.rotation.x = clamp($Camera3D.rotation.x, -PI/2, PI/2)
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 0
 
 
 func _physics_process(delta: float) -> void:
