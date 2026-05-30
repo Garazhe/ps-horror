@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://byhjkm4ksd1g0" path="res://levels/test_room/floor.gd" id="1_728dk"]
 [ext_resource type="PackedScene" uid="uid://b2h14uk6anwsi" path="res://entities/player/player.tscn" id="1_tciw1"]
+[ext_resource type="PackedScene" uid="uid://evns7vu6vfsn" path="res://assets/models/Овца.glb" id="3_a2jhn"]
 
 [node name="Node3D" type="Node3D" unique_id=255792297]
 script = ExtResource("1_728dk")
@@ -12,3 +13,6 @@ size = Vector3(10, 1, 10)
 
 [node name="Player" parent="floor" unique_id=1199600279 instance=ExtResource("1_tciw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5758574, 0)
+
+[node name="Овца" parent="." unique_id=478385762 instance=ExtResource("3_a2jhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3707633, 2.7406044, 2.4838505)
