@@ -2,19 +2,33 @@
 
 [ext_resource type="Script" uid="uid://byhjkm4ksd1g0" path="res://levels/test_room/floor.gd" id="1_728dk"]
 [ext_resource type="PackedScene" uid="uid://b2h14uk6anwsi" path="res://entities/player/player.tscn" id="1_tciw1"]
-[ext_resource type="Texture2D" uid="uid://dd5kb2o6q35on" path="res://ui/menus/long_white_tiles_diff_1k.jpg" id="2_a2jhn"]
+[ext_resource type="Texture2D" uid="uid://cm3inptx0xiuc" path="res://assets/textures/long_white_tiles_ao_1k.jpg" id="2_a2jhn"]
+[ext_resource type="Texture2D" uid="uid://b0gh7pjyevfdg" path="res://assets/textures/overcast_soil_puresky_2k.exr" id="4_fpusa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fpusa"]
 albedo_texture = ExtResource("2_a2jhn")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fpusa"]
+panorama = ExtResource("4_fpusa")
+
+[sub_resource type="Sky" id="Sky_bdvmo"]
+sky_material = SubResource("PanoramaSkyMaterial_fpusa")
+
+[sub_resource type="Environment" id="Environment_a2jhn"]
+background_mode = 2
+sky = SubResource("Sky_bdvmo")
 
 [node name="Node3D" type="Node3D" unique_id=255792297]
 script = ExtResource("1_728dk")
 
 [node name="floor" type="CSGBox3D" parent="." unique_id=2121106331]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7182713, -1.1748371, -9.575006)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27405834, -1.0795677, 0.07091904)
 material_override = SubResource("StandardMaterial3D_fpusa")
 use_collision = true
 size = Vector3(13.328506, 1, 16.4552)
 
 [node name="Player" parent="floor" unique_id=1199600279 instance=ExtResource("1_tciw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5758574, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2048126892]
+environment = SubResource("Environment_a2jhn")
