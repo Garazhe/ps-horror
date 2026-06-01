@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7bgk6sgjjexj"
-path.s3tc="res://.godot/imported/Pvz_RoomScale_Tiles074_1K-PNG_Color1.png-ef816ccd25251a40b095e813999574d5.s3tc.ctex"
+uid="uid://nxvw54fo5nua"
+path.s3tc="res://.godot/imported/Pvz_RoomScale_Concrete046_1K-PNG_Color1.png-0f18b773e572f59a76c560ab972d93cb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "06426721fa9047d1345c63a73cc399a1"
+"md5": "45ea850e9512567f7aa84ed44500476e"
 }
 
 [deps]
 
-source_file="res://assets/models/Pvz_RoomScale_Tiles074_1K-PNG_Color1.png"
-dest_files=["res://.godot/imported/Pvz_RoomScale_Tiles074_1K-PNG_Color1.png-ef816ccd25251a40b095e813999574d5.s3tc.ctex"]
+source_file="res://assets/textures/Pvz_RoomScale_Concrete046_1K-PNG_Color1.png"
+dest_files=["res://.godot/imported/Pvz_RoomScale_Concrete046_1K-PNG_Color1.png-0f18b773e572f59a76c560ab972d93cb.s3tc.ctex"]
 
 [params]
 

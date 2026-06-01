@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd5kb2o6q35on"
-path.s3tc="res://.godot/imported/long_white_tiles_diff_1k.jpg-5fdeb495218a85fc4c1eff521bddb038.s3tc.ctex"
+uid="uid://b8y2vx7sn0viv"
+path.s3tc="res://.godot/imported/Pvz_RoomScale_OfficeCeiling002_1K-JPG_Color1.jpg-8fdde9de2c7b83bbad2771bcfd54b289.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "17f4284d6ed4ab9c8b0d531f8ff8b233"
+}
 
 [deps]
 
-source_file="res://ui/menus/long_white_tiles_diff_1k.jpg"
-dest_files=["res://.godot/imported/long_white_tiles_diff_1k.jpg-5fdeb495218a85fc4c1eff521bddb038.s3tc.ctex"]
+source_file="res://assets/textures/Pvz_RoomScale_OfficeCeiling002_1K-JPG_Color1.jpg"
+dest_files=["res://.godot/imported/Pvz_RoomScale_OfficeCeiling002_1K-JPG_Color1.jpg-8fdde9de2c7b83bbad2771bcfd54b289.s3tc.ctex"]
 
 [params]
 
