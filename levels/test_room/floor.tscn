@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b2h14uk6anwsi" path="res://entities/player/player.tscn" id="1_tciw1"]
 [ext_resource type="Texture2D" uid="uid://cruvnawfccel2" path="res://assets/textures/texupload-STP4-1C3C8F3414124D9C-BA9E0401171BF6F2-64x256-0-192-68x64-P0-15.png" id="2_fpusa"]
 [ext_resource type="Texture2D" uid="uid://b0gh7pjyevfdg" path="res://assets/textures/overcast_soil_puresky_2k.exr" id="4_fpusa"]
+[ext_resource type="PackedScene" uid="uid://d013x5bpls00m" path="res://assets/models/Pvz_RoomScale.glb" id="5_kwugv"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fpusa"]
 panorama = ExtResource("4_fpusa")
@@ -28,7 +29,7 @@ script = ExtResource("1_728dk")
 environment = SubResource("Environment_a2jhn")
 
 [node name="Player" parent="." unique_id=1199600279 instance=ExtResource("1_tciw1")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0, 0)
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 4.138114, 0)
 
 [node name="Floor" type="CSGBox3D" parent="." unique_id=1830700650]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.169408, -3.1379333, -3.9888651)
@@ -46,3 +47,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.03283906)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CSGSphere3D/RigidBody3D" unique_id=950893384]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGSphere3D/RigidBody3D" unique_id=1851052742]
+
+[node name="Pvz_RoomScale" parent="." unique_id=2089429372 instance=ExtResource("5_kwugv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0893693, -2.6379333, 2.1835122)
