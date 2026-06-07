@@ -1,36 +1,39 @@
 extends CharacterBody3D
 
-
+#variables
+@onready var raycast = $RayCast3D
+var sen = 0.005
+var SPEED = 5.0
+const JUMP_VELOCITY = 0
+@onready var dialoger: Node3D = get_tree().current_scene.get_node("dialog_trigger2")
+@onready var ds = dialoger.started
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED # Прячем курсор при старте игры
 
+#Rotation and interaction check
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
-		# Крутим капсулу влево-вправо
-		rotate_y(-event.relative.x * 0.005) 
-		# Крутим саму камеру вверх-вниз
-		$Camera3D.rotate_x(-event.relative.y * 0.005) 
-		# Ограничиваем угол обзора, чтобы игрок не сломал шею
+		rotate_y(-event.relative.x * sen) 
+		$Camera3D.rotate_x(-event.relative.y * sen) 
 		$Camera3D.rotation.x = clamp($Camera3D.rotation.x, -PI/2, PI/2)
-const JUMP_VELOCITY = 0
+
+
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var SPEED = 5.0
+		
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if Input.is_action_pressed("ui_run"):
+	
+	#run
+	if  dialoger.started == false and Input.is_action_pressed("ui_run"):
 		SPEED = 10.0
 	if direction:
 		velocity.x = direction.x * SPEED
@@ -41,3 +44,11 @@ func _physics_process(delta: float) -> void:
 	
 
 	move_and_slide()
+
+#Dialog
+
+func check_interaction():
+	if raycast and raycast.is_colliding():
+		var target = raycast.get_collider()
+		if target.has_method("interact"):
+			target.interact()

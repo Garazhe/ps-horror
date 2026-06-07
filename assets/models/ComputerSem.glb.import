@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://evns7vu6vfsn"
-path="res://.godot/imported/Овца.glb-9b035280a305a2c41d015d1a34bc4fec.scn"
+uid="uid://bf7wpd182yfmc"
+path="res://.godot/imported/ComputerSem.glb-7232660795ed993dfbe6a4bf1fe2f651.scn"
 
 [deps]
 
-source_file="res://assets/models/Овца.glb"
-dest_files=["res://.godot/imported/Овца.glb-9b035280a305a2c41d015d1a34bc4fec.scn"]
+source_file="res://assets/models/ComputerSem.glb"
+dest_files=["res://.godot/imported/ComputerSem.glb-7232660795ed993dfbe6a4bf1fe2f651.scn"]
 
 [params]
 
