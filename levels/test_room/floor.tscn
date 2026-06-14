@@ -5,28 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://cruvnawfccel2" path="res://assets/textures/texupload-STP4-1C3C8F3414124D9C-BA9E0401171BF6F2-64x256-0-192-68x64-P0-15.png" id="2_fpusa"]
 [ext_resource type="PackedScene" uid="uid://cy7em18e501sf" path="res://ui/dialogs/dialog_ui.tscn" id="2_u74kl"]
 [ext_resource type="PackedScene" uid="uid://bswl6ayvobrms" path="res://ui/dialogs/dialog_trigger.tscn" id="3_7jl71"]
-[ext_resource type="Texture2D" uid="uid://b0gh7pjyevfdg" path="res://assets/textures/overcast_soil_puresky_2k.exr" id="4_fpusa"]
 [ext_resource type="PackedScene" uid="uid://xbuwbmuduvt7" path="res://assets/models/ssss.tscn" id="9_u74kl"]
 [ext_resource type="PackedScene" uid="uid://ceuvhbjmey7sv" path="res://assets/models/computer_sem.tscn" id="10_7jl71"]
 [ext_resource type="PackedScene" uid="uid://babr24uijtnh5" path="res://assets/models/noText.tscn" id="10_c26uo"]
 [ext_resource type="PackedScene" uid="uid://do6jv4k3lycc3" path="res://assets/models/TableCheck.glb" id="10_v5p3x"]
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fpusa"]
-panorama = ExtResource("4_fpusa")
-
-[sub_resource type="Sky" id="Sky_bdvmo"]
-sky_material = SubResource("PanoramaSkyMaterial_fpusa")
-radiance_size = 0
-
-[sub_resource type="Environment" id="Environment_a2jhn"]
-background_mode = 2
-background_energy_multiplier = 0.15
-sky = SubResource("Sky_bdvmo")
-ambient_light_source = 1
-ambient_light_color = Color(0.1231002, 3.6850107e-08, 1.504086e-08, 1)
-ambient_light_sky_contribution = 0.22
-ambient_light_energy = 0.79
-reflected_light_source = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwugv"]
 albedo_texture = ExtResource("2_fpusa")
@@ -36,9 +18,6 @@ albedo_texture = ExtResource("2_fpusa")
 
 [node name="Node3D" type="Node3D" unique_id=255792297]
 script = ExtResource("1_728dk")
-
-[node name="SkyBox" type="WorldEnvironment" parent="." unique_id=2048126892]
-environment = SubResource("Environment_a2jhn")
 
 [node name="Player" parent="." unique_id=1199600279 instance=ExtResource("1_tciw1")]
 transform = Transform3D(1.085188, 0, 0, 0, 1.0851879, 0, 0, 0, 1.085188, 6.2530627, 0, 0)
