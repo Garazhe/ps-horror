@@ -15,14 +15,21 @@ run/main_scene="uid://bew5g0mylme4a"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+<<<<<<< HEAD
 [autoload]
 
 DialogManager="*uid://brtmc0al8o6g6"
 
+=======
+>>>>>>> c49819ac4423b2dab95437e19d71ca8d63d3e196
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=478
+<<<<<<< HEAD
+=======
+window/size/borderless=true
+>>>>>>> c49819ac4423b2dab95437e19d71ca8d63d3e196
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 
